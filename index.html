@@ -18,13 +18,24 @@
         margin: 24px;
         align-items: center;
       }
-      /* The animation code */
       @keyframes latido {
-        from {
+        0% {
           width: 0px;
           padding: 0px 0px;
         }
-        to {
+
+        25% {
+          width: 0px;
+          padding: 0px 0px;
+        }
+        /* Finish changes by here */
+        75% {
+          width: 256px;
+          padding: 0px 16px;
+        }
+
+        /* Between 20% and 100%, nothing changes */
+        100% {
           width: 256px;
           padding: 0px 16px;
         }
@@ -59,11 +70,12 @@
         margin: 0px;
         color: white;
         text-shadow: 1px 1px 2px #888;
+        animation-name: latido;
         animation-duration: 20s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease-out;
-        animation-delay: 20s;
+        animation-delay: 3s;
       }
       #githublogo {
         width: 36px;
